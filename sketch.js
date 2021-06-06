@@ -1,68 +1,52 @@
 /*
-The case of the Python Syndicate
-Stage 2
-
 
 Officer: 1680135
-CaseNum: 301-1-64171211-1680135
+CaseNum: 101-0-24273845-1680135
 
-- Word on the street is that there is a new gang in town - The Python Syndicate.
-It seems my bones were correct on this one. I need you to organise the gang
-around the suspected leader Anna karpinski
+Case 101 - The Case of Lina Lovelace
+Stage 1 - Central Station
 
-- The variables for Anna karpinski have been declared and
-initialised.
-- Modify the x and y parameters of each image command using these two variables
-so the images maintain their correct positions their correct positions on the board.
-- To do this you will need to combine add and subtract operators with variables
-Anna karpinski for for each parameter.
-- Do not create any new variables
-- Do not add any additional commands
+Hi kid, you’re new to this job so lets give you a simple case to get you started.
+Our client, a well-known impresario, suspects that their star act, Lina Lovelace,
+is involved with some no-good unsavoury characters. I need you to trail her and
+identify who she meets.
 
+First you need to pick up Lina’s trail at Central station.
+
+Do this by drawing a rectangle around her.
+She’s the woman wearing the red dress.
+You can’t miss her.
+
+The rectangle should surround Lina as accurately as possible without
+including anything else.
+
+There are many possible ways of investigating this case, but you
+should use ONLY the following commands:
+
+  rect ()
 
 */
 
-var photoBoard;
-var pawel_karpinski_image;
-var countess_hamilton_image;
-var lina_lovelace_image;
-var rocky_kray_image;
-var anna_karpinski_image;
-var cecil_karpinski_image;
-
-
-var anna_karpinski_coordinate_x = 408;
-var anna_karpinski_coordinate_y = 309;
-
+var img;
 
 function preload()
 {
-	photoBoard = loadImage('photoBoard.png');
-	pawel_karpinski_image = loadImage("karpinskiBros2.png");
-	countess_hamilton_image = loadImage("countessHamilton.png");
-	lina_lovelace_image = loadImage("lina.png");
-	rocky_kray_image = loadImage("krayBrothers1.png");
-	anna_karpinski_image = loadImage("karpinskiWoman.png");
-	cecil_karpinski_image = loadImage("karpinskiBros1.png");
-
+	img = loadImage('img.jpg');
 }
 
 function setup()
 {
-	createCanvas(photoBoard.width, photoBoard.height);
+	createCanvas(img.width,img.height);
+	noFill();
+	stroke(0);
+	strokeWeight(2);
 }
 
 function draw()
 {
-	image(photoBoard, 0, 0);
+	image(img,0,0);
 
-	//And update these image commands with your x and y coordinates.
-	image(anna_karpinski_image, anna_karpinski_coordinate_x, anna_karpinski_coordinate_y);
-
-	//image(pawel_karpinski_image, 115, 40);
-	//image(countess_hamilton_image, 408, 40);
-	//image(lina_lovelace_image, 701, 40);
-	//image(rocky_kray_image, 115, 309);
-	//image(cecil_karpinski_image, 701, 309);
+	//Write your code below here ...
+rect(177,198,120,240);
 
 }
